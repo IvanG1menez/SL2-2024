@@ -31,6 +31,9 @@
             button1 = new Button();
             folderBrowserDialog1 = new FolderBrowserDialog();
             button2 = new Button();
+            button3 = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -53,16 +56,42 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(103, 206);
+            button3.Name = "button3";
+            button3.Size = new Size(176, 69);
+            button3.TabIndex = 2;
+            button3.Text = "Buscar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(154, 293);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 3;
+            label1.Text = "label1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -70,5 +99,8 @@
         private Button button1;
         private FolderBrowserDialog folderBrowserDialog1;
         private Button button2;
+        private Button button3;
+        private OpenFileDialog openFileDialog1;
+        private Label label1;
     }
 }

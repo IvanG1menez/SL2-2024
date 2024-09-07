@@ -45,5 +45,19 @@ namespace C1_040924_Parte_2
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) ;
+            {
+                // Se establece el nombre del archivo a leer
+                string fileName = openFileDialog1.FileName;
+                // Se lee el archivo y se muestra en el control label1
+                using (StreamReader archivoEntrada = new StreamReader(fileName))
+                {
+                    label1.Text = archivoEntrada.ReadToEnd();
+                }
+            }
+        }
     }
 }
