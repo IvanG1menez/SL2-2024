@@ -48,10 +48,10 @@ namespace C1_040924_Parte_2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK) ;
+            if (openFileBuscar.ShowDialog() == DialogResult.OK) ;
             {
                 // Se establece el nombre del archivo a leer
-                string fileName = openFileDialog1.FileName;
+                string fileName = openFileBuscar.FileName;
                 // Se lee el archivo y se muestra en el control label1
                 using (StreamReader archivoEntrada = new StreamReader(fileName))
                 {
@@ -63,6 +63,34 @@ namespace C1_040924_Parte_2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            {
+
+            }
+            
+            
+            
+            // que el contenido de textBox1 se escriba en el archivo datos.txt
+            string fileName = Path.Combine(this.appPath, "datos.txt");
+            if (!File.Exists(fileName))
+            {
+                using (StreamWriter archivoSalida = new StreamWriter(fileName))
+                {
+                    archivoSalida.WriteLine(textBox1.Text);
+                }
+            }
+            else
+            {
+                using (StreamWriter archivoSalida = new StreamWriter(fileName, true))
+                {
+                    archivoSalida.WriteLine(textBox1.Text);
+                }
+            }
+
+            
         }
     }
 }
