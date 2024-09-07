@@ -38,9 +38,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(103, 61);
+            button1.Location = new Point(42, 38);
             button1.Name = "button1";
-            button1.Size = new Size(182, 74);
+            button1.Size = new Size(300, 64);
             button1.TabIndex = 0;
             button1.Text = "Seleccionar directorio de destino";
             button1.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(510, 66);
+            button2.Location = new Point(42, 204);
             button2.Name = "button2";
-            button2.Size = new Size(176, 69);
+            button2.Size = new Size(300, 79);
             button2.TabIndex = 1;
             button2.Text = "Guardar";
             button2.UseVisualStyleBackColor = true;
@@ -58,11 +58,11 @@
             // 
             // button3
             // 
-            button3.Location = new Point(103, 206);
+            button3.Location = new Point(42, 108);
             button3.Name = "button3";
-            button3.Size = new Size(176, 69);
+            button3.Size = new Size(300, 79);
             button3.TabIndex = 2;
-            button3.Text = "Buscar";
+            button3.Text = "Buscar Archivo";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -73,23 +73,24 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(154, 293);
+            label1.Location = new Point(523, 136);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(85, 23);
             label1.TabIndex = 3;
-            label1.Text = "label1";
+            label1.Text = "Resultado";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(900, 518);
             Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
